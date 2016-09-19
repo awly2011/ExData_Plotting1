@@ -12,6 +12,6 @@ Global_active_power <- as.numeric(data2$Global_active_power)
 time1 <- paste(data2$Date, data2$Time)
 time1 <- as.POSIXct(strptime(time1, "%d/%m/%Y %H:%M:%S"))
 
-png(file="plot 2.png")
+png(file="plot2.png")
 plot(time1, Global_active_power, type="l", ylab="Global Active Power(kilowatts)", xlab="")
 dev.off()
