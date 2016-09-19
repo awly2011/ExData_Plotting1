@@ -22,7 +22,7 @@ data3 <- data.frame(time1, Sub_metering_1, Sub_metering_2, Sub_metering_3)
 meltdata3 <- melt(data3, id = c("time1"))
 
 # First draw graph without any lines and points, then three lines added seperately
-png(file="plot 3.png")
+png(file="plot3.png")
 with(meltdata3, plot(time1, value, type = "n", xlab = "", ylab = "Energy sub metering"))
 with(subset(meltdata3, variable == "Sub_metering_1"), lines(time1, value, type = "l"))
 with(subset(meltdata3, variable == "Sub_metering_2"), lines(time1, value, col="red", type = "l"))
