@@ -21,7 +21,7 @@ data3 <- data.frame(time1, Sub_metering_1, Sub_metering_2, Sub_metering_3)
 meltdata3 <- melt(data3, id = c("time1"))
 
 # Basically draw 4 different graphs together
-png(file="plot 4.png")
+png(file="plot4.png")
 par(mfrow=c(2,2))
 plot(time1, Global_active_power, type="l", ylab="Global Active Power", xlab="")
 plot(time1, data2$Voltage, type = "l", xlab = "datetime", ylab = "Voltage")
